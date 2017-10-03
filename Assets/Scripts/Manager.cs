@@ -118,7 +118,7 @@ public class Manager : MonoBehaviour
                     {
                         if (GUI.Button(Myrect(240 - 260 / 2, 615, 260, buttonHeight), "Sound ON", mainOrange))
                         {
-                            audio.Stop();
+                            GetComponent<AudioSource>().Stop();
                             soundOnOff = !soundOnOff;
                         }
                     }
@@ -270,7 +270,7 @@ public class Manager : MonoBehaviour
         if (soundOnOff == true)
         {
             this.GetComponent<AudioSource>().clip = sounds[i];
-            audio.Play();
+            GetComponent<AudioSource>().Play();
         }
     }
 

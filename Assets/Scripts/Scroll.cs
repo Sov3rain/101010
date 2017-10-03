@@ -22,19 +22,19 @@ public class Scroll : MonoBehaviour
             case TYPE.BACK001:
                 {
                     float offset = Time.time * scrollSpeed;
-                    renderer.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
+                    GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
                     break;
                 }
             case TYPE.BACK002 :
                 {
                     float offset = Time.time * scrollSpeed2;
-                    renderer.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
+                    GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
                     break;
                 }
             case TYPE.SNAP:
                 {
                     float offset = Time.time * scrollSpeed3;
-                    renderer.material.SetTextureOffset("_MainTex", new Vector2(-offset, 0));
+                    GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(-offset, 0));
                     break;
                 }
         }   
