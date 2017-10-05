@@ -77,7 +77,7 @@ public class Manager : MonoBehaviour
         blur.enabled = true;
     }
 
-    void Update()
+    void LateUpdate()
     {
         if (Corps.instance != null)
         {
