@@ -41,7 +41,7 @@ public class Manager : MonoBehaviour
     public GUIStyle roundedStyleUp;
     public GUIStyle roundedStyleDown;
     public GUIStyle roundedStylePause;
-    public GUITexture blur;
+    //public GUITexture blur;
 
     public Vector2 scrollPos = Vector2.zero;
     private int buttonSize = 225;
@@ -74,7 +74,7 @@ public class Manager : MonoBehaviour
         mainOrange.fontSize = 48 * Screen.width / 480;
         soundOnOff = true;
         PlaySound(0);
-        blur.enabled = true;
+        //blur.enabled = true;
     }
 
     void LateUpdate()
@@ -91,7 +91,7 @@ public class Manager : MonoBehaviour
         {
             case STATES.MENU:
                 {
-                    blur.enabled = true;
+                    //blur.enabled = true;
 
                     if (GUI.Button(Myrect(240- 260/2, 700, 260, buttonHeight), "Reset", mainStyle))
                     {
@@ -135,14 +135,14 @@ public class Manager : MonoBehaviour
                 }
             case STATES.LOADING:
                 {
-                    blur.enabled = true;
+                    //blur.enabled = true;
 
                     GUI.Label(Myrect(0, 0, 400, 300), "Loading in progress...");
                     break;
                 }
             case STATES.PLAY:
                 {
-                    blur.enabled = false;
+                    //blur.enabled = false;
 
                     if (GUI.Button(Myrect(10, 10, 60, 60), "", roundedStylePause))
                     {
@@ -167,7 +167,7 @@ public class Manager : MonoBehaviour
 
             case STATES.FAIL:
                 {
-                    blur.enabled = true;
+                    //blur.enabled = true;
 
                     if (GUI.Button(Myrect(240 - buttonSize / 2, 280, buttonSize, buttonHeight), "Restart", mainStyle))
                     {
@@ -184,7 +184,7 @@ public class Manager : MonoBehaviour
 
             case STATES.WIN:
                 {
-                    blur.enabled = true;
+                    //blur.enabled = true;
 
                     if (levels.currentLevel != endGame)
                     {
@@ -205,7 +205,7 @@ public class Manager : MonoBehaviour
                 }
             case STATES.PAUSE:
                 {
-                    blur.enabled = true;
+                    //blur.enabled = true;
 
                     if (GUI.Button(Myrect(240 - buttonSize / 2, 280, buttonSize, buttonHeight), "Resume", mainStyle))
                     {
